@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 final items = List<String>.generate(100000, (i) => "Item $i");
 
@@ -18,6 +19,14 @@ class Chapter4 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Chapter 4"),
+        actions: [
+          IconButton(
+            onPressed: () {
+              launchUrlString("https://www.youtube.com/watch?v=IdtramLtYVA&t=588s");
+            },
+            icon: Icon(Icons.open_in_new),
+          )
+        ],
       ),
       body: Builder(builder: (context) {
         switch (approach) {

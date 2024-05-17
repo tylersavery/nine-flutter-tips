@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class Chapter5 extends StatelessWidget {
   const Chapter5({super.key});
@@ -8,6 +9,14 @@ class Chapter5 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Chapter 5"),
+        actions: [
+          IconButton(
+            onPressed: () {
+              launchUrlString("https://www.youtube.com/watch?v=IdtramLtYVA&t=1021s");
+            },
+            icon: Icon(Icons.open_in_new),
+          )
+        ],
       ),
       body: Chapter5Body(),
     );

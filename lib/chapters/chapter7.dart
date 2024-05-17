@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 import '../device_utils/device_utils.dart';
 
 class Chapter7 extends StatelessWidget {
@@ -9,6 +10,14 @@ class Chapter7 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Chapter 7"),
+        actions: [
+          IconButton(
+            onPressed: () {
+              launchUrlString("https://www.youtube.com/watch?v=IdtramLtYVA&t=1644s");
+            },
+            icon: Icon(Icons.open_in_new),
+          )
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
