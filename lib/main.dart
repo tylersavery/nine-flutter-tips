@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tips/env.dart';
 import 'chapters/chapters.dart';
 
-void main() {
+void main() async {
+  await Env.init();
   runApp(const MyApp());
 }
 
@@ -77,6 +79,21 @@ class HomeScreen extends StatelessWidget {
             chapter: 9,
             label: "Refactor Tips",
             screen: Chapter9(),
+          ),
+          NavLink(
+            chapter: 10,
+            label: "Responsive Screens",
+            screen: Chapter10(),
+          ),
+          NavLink(
+            chapter: 11,
+            label: "Dialog Animations",
+            screen: Chapter11(),
+          ),
+          NavLink(
+            chapter: 12,
+            label: "App Flavors",
+            screen: Chapter12(),
           ),
         ],
       ),

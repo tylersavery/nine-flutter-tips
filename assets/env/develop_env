@@ -1,0 +1,3 @@
+NAME=develop
+COOL_API_PUBLIC_KEY=foobar_develop
+DEBUG_MODE=true

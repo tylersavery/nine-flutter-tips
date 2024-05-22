@@ -7,3 +7,6 @@ export './chapter6.dart';
 export './chapter7.dart';
 export './chapter8.dart';
 export './chapter9.dart';
+export './chapter10.dart';
+export './chapter11.dart';
+export './chapter12.dart';

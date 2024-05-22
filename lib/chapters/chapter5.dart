@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tips/screen_utils.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class Chapter5 extends StatelessWidget {
@@ -80,30 +81,5 @@ class BaseComponent extends StatelessWidget {
 
   Widget bodyLg(BuildContext context) {
     return body(context);
-  }
-}
-
-enum ScreenSize {
-  sm,
-  md,
-  lg,
-}
-
-class ScreenUtils {
-  static const breakpointSm = 576.0;
-  static const breakpointMd = 992.0;
-
-  static ScreenSize size(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-
-    if (width < breakpointSm) {
-      return ScreenSize.sm;
-    }
-
-    if (width < breakpointMd) {
-      return ScreenSize.md;
-    }
-
-    return ScreenSize.lg;
   }
 }
